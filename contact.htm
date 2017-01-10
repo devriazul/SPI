@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Shariatpur Polytechnic Institute</title>
+    <link rel="shortcut icon" href="Default_files/favicon.png">
+    <link rel="shortcut icon" href="Default_files/favicon.ico">
+    <link href="Default_files/StyleSheet.css" rel="stylesheet"
+      type="text/css">
+    <style type="text/css">
+<!--
+.style1 {font-size: 14px}
+-->
+    </style>
+  </head>
+  <body>
+      <div></div>
+      <div class="main">
+        <div class="header">
+          <div class="head">
+            <div class="logo"></div>
+            <div class="logo1"></div>
+            <div class="galeria"><img
+                src="Default_files/bangladesh-govt_-logo.png"
+                alt="Default_files" height="100" width="100"></div>
+          </div>
+        </div>
+        <div class="menu_resize">
+          <div class="main-menu">
+            <div class="navmenu">
+              <ul>
+                <li><a href="Default.htm">Home</a> </li>
+                <li><a href="about.htm">About</a> </li>
+                <li><a href="departments.htm">Departments</a> </li>
+                <li><a href="teachers.htm">Teachers</a></li>
+                <li><a href="gallery.htm">Gallery</a> </li>
+                <li><a href="studentinfo.htm">Student Information </a></li>
+                <li><a href="staff.htm">Staff</a> </li>
+                <li><a href="contact.htm">Contact Us</a> </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="body_resize">
+        <div class="mainbody">
+          <div class="corner-right-bot">
+            <div class="clr" style="margin-top: 8px;"></div>
+            <div class="clr"></div>
+            <div class="widget">
+              <div class="border-left">
+                <div class="border-right">
+                  <div class="title">
+                    <div>
+                      <div>
+                        <h2>Menu</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="border-bot">
+                    <div class="corner-left-bot">
+                      <div class="corner-right-bot">
+                        <div class="lmenu">
+                          <ul>
+                            <li><a href="requirements.htm" title="Admission Requirements">Admission Requirements</a></li>
+                            <li><a href="studentinfo.htm" title="Student Information">Student Information</a></li>
+                            <li><a href="gallery.htm" title="Gallery">Gallery</a></li>
+                            <li><a href="departments.htm" title="Departments">Departments</a> </li>
+                            <li><a href="teachers.htm" title="Teachers">Teachers</a></li>
+                            <li><a href="routine.htm" title="Class Routine">Class Routine </a> </li>
+                            <li><a href="results.htm" title="Results">Results</a></li>
+                            <li><a href="help.htm" title="Help">Help</a></li>
+                            <li><a href="links.htm" title="Related Links">Related Links</a> </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="border-left">
+                <div class="border-right">
+                  <div class="title">
+                    <div></div>
+                  </div>
+                  <div class="border-bot">
+                    <div class="corner-left-bot"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="body">
+              <div class="column-center">
+                <div class="border-left">
+                  <div class="border-right">
+                    <div class="title">
+                      <div>
+                        <div>
+                          <h2><span>Contact us</span> </h2>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="border-bot">
+                      <div class="corner-left-bot">
+                        <div class="corner-right-bot">
+                          <div class="firstleft">
+                            <div>
+                              <h2>Feedback</h2>
+                              <div class="forms">
+                                <div style="color: rgb(0, 51, 102);
+                                  font-weight: bolder; margin-bottom:
+                                  15px;"> </div>
+                                <div class="clr"></div>
+                                <ol>
+								
+<?php
+
+if (!isset($_SESSION))
+    session_start();
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+    
+$output =<<<HEREDOC
+    <h1>New Student Insertion Form</h1>
+        
+        <form action="handleinsert.php" method="POST">
+            <table align="center">
+            <tr>
+                    <li><label class="label style1">Your Topic</label> <input name="topic" id="topic" class="textbox" size="54"> </li>
+                                  <li><label class="label style1">Full name</label> <input name="name" id="name" class="textbox" size="54"> </li>
+                                  <li><label class="label style1">Email Address</label> <input name="email" id="email"  class="textbox" size="54"> </li>
+                                  <li>
+								  <label class="label">Questions / Comments (Please include as much detailed information as possible, including page URLs, where applicable.)</label>
+								  <textarea name="comment" id="comment" cols="" rows="" class="firstright"></textarea>
+                                  <div class="clr"></div>
+                                  </li>
+                    
+                </tr>
+            </table>
+
+
+Click <a href="adminhome.php">here</a> to go back to admin home
+HEREDOC;
+if (isset($_SESSION['login']) && $_SESSION['login'] == 'Y') {
+    echo $output;
+} else {
+    //echo "adminhome.php's else branch";
+    include('index.php');
+}
+?>
+
+                                  
+                                </ol>
+                              </div>
+                            </div>
+                            <div style="font-size: 15px; text-align:
+                              left; font-weight: bolder; margin-left:
+                              25px; margin-bottom: 15px;"
+                              class="bottons"><input id="Reset1"
+                                value="Clear" type="reset"> <input
+                                value="Submit" type="submit"></div>
+                          </div>
+                          <div class="firstright">
+                            <div class="left">
+                              <div class="contacts">
+                                <h2>Contact</h2>
+                                <p><a href="mailto:Sajon0001@gmail.com"
+                                    style="font-weight: normal;">Sajon0001@gmail.com</a></p>
+                                <p><a href="mailto:Sajon0001@yahoo.com"
+                                    style="font-weight: normal;">Sajon0001@yahoo.com</a></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clr"></div>
+        <div class="footer">
+          <div class="foot">
+            <div class="title">
+              <div>
+                <div>
+                  <h2>More Information</h2>
+                </div>
+              </div>
+            </div>
+            <div class="fot">
+              <ul>
+                <li><a href="Default.htm" title="Home">Home</a> </li>
+                <li><a href="teachers.htm" title="Teachers">Teachers</a></li>
+                <li><a href="routine.htm" title="Class Routine">Class
+                    Routine</a></li>
+                <li><a href="grading.htm" title="Grading System">Grading
+                    System</a></li>
+                <li><a href="requirements.htm" title="Admission
+                    Requirements">Admission Require</a></li>
+                <li><a href="http://www.techedu.gov.bd/"
+                    title="Technical Education Board">Technical
+                    Education </a></li>
+                <li><a href="about.htm" title="About">About</a> </li>
+                <li><a href="gallery.htm" title="Gallery">Gallery</a> </li>
+                <li><a href="syllabus.htm" title="Syllabus">Syllabus</a></li>
+                <li><a href="notice.htm" title="Notice">Notice</a></li>
+                <li><a href="links.htm" title="Related Links">Related
+                    Links</a></li>
+                <li><a href="help.htm" title="Help">Help</a> </li>
+                <li><a href="departments.htm" title="Departments">Departments</a></li>
+                <li><a href="studentinfo.htm" title="Student
+                    Information">Student Information </a></li>
+                <li><a href="probidhan.htm" title="Probidhan">Probidhan</a></li>
+                <li><a href="results.htm" title="Results">Results</a> </li>
+                <li><a href="http://www.bteb.gov.bd/" title="BTEB">BTEB</a>
+                </li>
+                <li><a href="contact.htm" title="Contact Us">Contact Us</a></li>
+              </ul>
+              <div class="copyright">
+                <div class="left">Copyright © 2013 Shariatpur
+                  Polytechnic Institute.</div>
+                <div class="right">Developed by: Computer Technology</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
